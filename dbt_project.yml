@@ -45,4 +45,5 @@ models:
       +schema: inter_schema
       +materialized: table
       
-
+vars:
+  v_min_order: 850
