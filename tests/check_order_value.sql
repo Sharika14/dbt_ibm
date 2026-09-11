@@ -1,3 +1,3 @@
 {{config(store_failures=true)}}
 
-select * from {{ref('stg_orders')}} where total_price<850
+select * from {{ref('stg_orders')}} where total_price< {{ var('v_min_order')}}
