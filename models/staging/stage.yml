@@ -1,7 +1,9 @@
 models:
   - name: stg_nations
+    description: Table for nation's data
     columns:
       - name: nation_id
+        description: Primary key for this table
         data_tests:
           - unique
           - not_null
@@ -12,17 +14,18 @@ models:
         data_tests:
           - accepted_values:
               arguments:
-                values: ['AFRICA', 'ASIA', 'EUROPE', 'AMERICA']
+                values: ['AFRICA', 'ASIA', 'EUROPE', 'AMERICA','MIDDLE EAST']
               config:
                 store_failures: TRUE
 
   - name: stg_orders
+    description: Order information
     columns:
       - name: total_price
         data_tests:
           - order_values:
               arguments:
-                val: 880
+                val: 850
               config:
                 store_failures: TRUE
 
